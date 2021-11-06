@@ -1,0 +1,24 @@
+{
+  "name": "nodeHeaders",
+  "version": "1.0.0",
+  "description": "A NodeJS app to display request headers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afalahi/nodeheaders"
+  },
+  "author": "Ali Falahi",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "debug": "^4.3.2",
+    "prettier": "^2.4.1"
+  }
+}
