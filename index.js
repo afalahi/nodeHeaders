@@ -9,7 +9,7 @@ app.set('port', port);
 
 const server = http.createServer(app);
 
-server.listen(port, () => console.log('app running'));
+server.listen(port, 'localhost', () => console.log('app running'));
 server.on('error', onError);
 server.on('listening', onListening);
 
