@@ -9,7 +9,7 @@ app.set('port', port);
 
 const server = http.createServer(app);
 
-server.listen(port, 'localhost', () => console.log('app running'));
+server.listen(port, '127.0.0.1', () => console.log('app running'));
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.json(headers);
 });
 
-function onError (error) {
+function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
   }
@@ -38,9 +38,9 @@ function onError (error) {
     default:
       throw error;
   }
-};
+}
 
-function normalizePort (val) {
+function normalizePort(val) {
   let port = parseInt(val, 10);
 
   if (isNaN(port)) {
@@ -54,10 +54,10 @@ function normalizePort (val) {
   }
 
   return false;
-};
+}
 
-function onListening  ()  {
+function onListening() {
   const addr = server.address();
   const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
   debug('Listening on ' + bind);
-};
+}
